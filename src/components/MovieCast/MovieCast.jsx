@@ -32,7 +32,6 @@ const MovieCast = () => {
 
     return (
         <div>
-            <h2>Cast</h2>
             {cast.length > 0 ? (
                 <ul className={css.castList}>
                     {cast.map((actor) => (

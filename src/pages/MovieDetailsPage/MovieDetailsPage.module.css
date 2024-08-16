@@ -37,11 +37,12 @@
 }
 .nav{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 10px;
     font-size: 25px;
     font-weight: bold;
+   
 }
 .navLink {
     color: rgb(0, 0, 0);
@@ -64,4 +65,8 @@
 .info{
     display: flex;
     flex-direction: column;
+}
+.img{
+    width: 400px;
+    height: 600px;
 }

@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react';
 import { fetchMovieReviews } from '../../services/tmdb-api';
-import { useParams, useLocation, Link } from 'react-router-dom';
+import { useParams} from 'react-router-dom';
 import css from './MovieReviews.module.css';
 
 const MovieReviews = () => {
     const { movieId } = useParams();
     const [reviews, setReviews] = useState([]);
     const [error, setError] = useState(null);
-    const location = useLocation();
-    const backLinkHref = location.state?.from ?? '/movies'; // Переход на /movies, если состояние не задано
+
 
     useEffect(() => {
         const getReviews = async () => {
@@ -31,8 +30,6 @@ const MovieReviews = () => {
 
     return (
         <div>
-            <Link to={backLinkHref}>Go back</Link>
-            <h2>Reviews</h2>
             {reviews.length > 0 ? (
                 <ul className={css.reviewsList}>
                     {reviews.map((review) => (

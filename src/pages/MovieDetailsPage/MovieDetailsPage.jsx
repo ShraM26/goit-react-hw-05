@@ -27,7 +27,11 @@ const MovieDetailsPage = () => {
                 <div className={css.info}>
                      <h1>{movie.title}</h1>
                     <p>{movie.overview}</p>
-                               <nav className={css.nav}>
+                              
+                </div>
+                <div>
+                <img className={css.img} src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
+                <nav className={css.nav}>
                  <NavLink
                          to="cast"
                          className={({ isActive }) => 
@@ -44,11 +48,10 @@ const MovieDetailsPage = () => {
   >
     Reviews
   </NavLink>
-            </nav>
+                    </nav>
                     </div>
-                <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
             </div>
- 
+  
             <Outlet />
         </div>
     );
