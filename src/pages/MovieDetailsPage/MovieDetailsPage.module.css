@@ -1,0 +1,67 @@
+.goBack {
+    display: inline-block;
+    /* Делаем элемент блочным, чтобы он вел себя как кнопка */
+    padding: 10px 20px;
+    /* Внутренние отступы для создания пространства внутри кнопки */
+    background-color: #080808;
+    /* Фон кнопки */
+    color: white;
+    /* Цвет текста */
+    border: none;
+    /* Убираем границу */
+    border-radius: 5px;
+    /* Скругленные углы */
+    text-decoration: none;
+    /* Убираем подчеркивание */
+    font-weight: bold;
+    /* Жирный шрифт */
+    text-align: center;
+    /* Центрируем текст */
+    cursor: pointer;
+    /* Курсор в виде руки при наведении */
+    position: fixed;
+    /* Фиксируем кнопку на экране */
+    right: 20px;
+    /* Положение кнопки справа */
+    top: 100px;
+    /* Положение кнопки сверху */
+    z-index: 1000;
+    /* Устанавливаем z-index, чтобы кнопка была выше других элементов */
+    transition: background-color 0.3s ease;
+    /* Плавный переход для фона при наведении */
+}
+
+.goBack:hover {
+    background-color: red;
+    /* Изменение цвета фона при наведении */
+}
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.navLink {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    
+}
+
+.activeLink {
+    color: red;
+    font-size: 30px;
+}
+.conteiner {
+    padding: 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+}
