@@ -93,21 +93,6 @@
     margin-bottom: 10px;
 }
 
-.goBack {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.goBack:hover {
-    background-color: #0056b3;
-}
 
 .nav {
     margin-top: 20px;
