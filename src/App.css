@@ -7,3 +7,15 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+.loading {
+  font-size: 24px;
+  /* Размер текста */
+  font-weight: bold;
+  /* Жирный шрифт */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Высота на весь экран */
+}

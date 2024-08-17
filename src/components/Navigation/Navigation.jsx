@@ -21,7 +21,9 @@ const Navigation = () => {
         >
           Movies
         </NavLink>
-      </nav>
+      
+     </nav>
+
     </header>
   );
 }

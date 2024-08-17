@@ -18,7 +18,16 @@ export const searchMovies = async (query) => {
     const response = await tmdbApi.get(`/search/movie?query=${query}`);
     return response.data.results;
 };
-
+// Функция для получения случайных фильмов
+export const getRandomMovies = async () => {
+    const randomPage = Math.floor(Math.random() * 500) + 1; // Генерируем случайную страницу (от 1 до 500)
+    const response = await tmdbApi.get('/discover/movie', {
+        params: {
+            page: randomPage,
+        },
+    });
+    return response.data.results;
+};
 export const fetchMovieDetails = async (movieId) => {
     const response = await tmdbApi.get(`/movie/${movieId}`);
     return response.data;
