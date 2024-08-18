@@ -15,6 +15,7 @@ const MovieList = ({ movies }) => {
         speed: 500,
         slidesToShow: 6,
         slidesToScroll: 3,
+         accessibility: true,
     };
 
     return (
