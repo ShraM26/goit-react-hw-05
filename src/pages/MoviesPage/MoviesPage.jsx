@@ -10,6 +10,7 @@ const MoviesPage = () => {
     const [searchParams, setSearchParams] = useSearchParams();
     const query = searchParams.get('query') || '';
     const [movies, setMovies] = useState([]);
+    const [searchQuery, setSearchQuery] = useState(query); // Локальний стан для інпуту
 
     useEffect(() => {
         if (query) {
@@ -28,7 +29,8 @@ const MoviesPage = () => {
     }, [query]);
 
     const handleSearch = () => {
-        setSearchParams({ query });
+        setSearchParams({ query: searchQuery }); 
+        setSearchQuery('');
     };
 
     const handleKeyDown = (event) => {
@@ -44,8 +46,8 @@ const MoviesPage = () => {
                 <div className={css.searchContainer}>
                     <input
                         type="text"
-                        value={query}
-                        onChange={e => setSearchParams({ query: e.target.value })}
+                        value={searchQuery}
+                        onChange={e => setSearchQuery(e.target.value)} 
                         onKeyDown={handleKeyDown}
                         placeholder="Search movies..."
                     />
