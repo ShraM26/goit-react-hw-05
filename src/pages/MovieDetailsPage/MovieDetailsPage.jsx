@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { useParams, NavLink, Outlet, useLocation } from 'react-router-dom';
+import { useParams, Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import { fetchMovieDetails } from '../../services/tmdb-api';
 import css from './MovieDetailsPage.module.css';
 
@@ -27,7 +27,7 @@ const MovieDetailsPage = () => {
     return (
         <div>
             <div className={css.container}>
-                <NavLink className={css.goBack} to={backLinkHref.current}>Go back</NavLink> {/* Используем сохраненную ссылку */}
+                <Link className={css.goBack} to={backLinkHref.current}>Go back</Link> {/* Используем сохраненную ссылку */}
                 <img className={css.img} src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
                 <div className={css.info}>
                     <h1>{movie.title}</h1>

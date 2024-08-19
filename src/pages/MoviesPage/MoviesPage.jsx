@@ -10,8 +10,7 @@ const MoviesPage = () => {
     const [searchParams, setSearchParams] = useSearchParams();
     const query = searchParams.get('query') || '';
     const [movies, setMovies] = useState([]);
-    const [searchQuery, setSearchQuery] = useState(query); // Локальний стан для інпуту
-
+    const [searchQuery, setSearchQuery] = useState(query); 
     useEffect(() => {
         if (query) {
             const fetchMovies = async () => {
